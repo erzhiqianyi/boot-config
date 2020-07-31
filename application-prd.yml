@@ -1,0 +1,23 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10001/eureka/
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:10000
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+      show_sql: true
+      use_sql_comments: true
+      format_sql: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

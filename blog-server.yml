@@ -7,3 +7,5 @@ spring:
     username: root
     password: root
     driverClassName: org.h2.Driver
+server:
+  port: 10004

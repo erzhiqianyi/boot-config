@@ -2,8 +2,6 @@ server:
   port: 20000
 
 spring:
-  application:
-    name: gateway
   cloud:
     gateway:
       # 配置路径

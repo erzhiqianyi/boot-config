@@ -15,7 +15,3 @@ eureka:
 server:
   # 指定端口
   port: 30000
-spring:
-  application:
-    # 配置微服务名称
-    name: register-server

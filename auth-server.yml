@@ -1,13 +1,21 @@
 server:
-  port: 10003
-auth:
-  hello: hello ,this is dev profile
-spring:
-  application:
-    name: auth-server
-  datasource:
-    url: jdbc:h2:mem:h2blog;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-    platform: h2
-    username: root
-    password: root
-    driverClassName: org.h2.Driver
+  # 指定端口在20002
+  port: 20002
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:20000/eureka
+
+# 定义feign相关配置
+feign:
+  client:
+    config:
+      # default表示为全局配置
+      default:
+        # 设置feign日志级别
+        loggerLevel: full

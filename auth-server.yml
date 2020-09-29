@@ -1,0 +1,21 @@
+server:
+  # 指定端口在20002
+  port: 40000
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:30000/eureka
+
+# 定义feign相关配置
+feign:
+  client:
+    config:
+      # default表示为全局配置
+      default:
+        # 设置feign日志级别
+        loggerLevel: full

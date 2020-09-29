@@ -15,3 +15,15 @@ eureka:
 server:
   # 指定端口
   port: 30000
+
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:50000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

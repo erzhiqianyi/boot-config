@@ -1,7 +1,3 @@
-spring:
-  application:
-    name: wechat-server
-
 server:
   # 指定端口在40001
   port: 40001
@@ -14,3 +10,15 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://127.0.0.1:30000/eureka
+
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:50000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

@@ -19,3 +19,16 @@ feign:
       default:
         # 设置feign日志级别
         loggerLevel: full
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:50000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+

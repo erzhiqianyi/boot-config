@@ -17,7 +17,7 @@ spring:
           predicates:
             # path断言
             - Path=/auth/**
-       - id: admin-server
+       - id: boot-admin
           # 转发uri
           uri: http://127.0.0.1:40000
           #  断言配置

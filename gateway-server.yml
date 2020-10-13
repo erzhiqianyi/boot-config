@@ -23,7 +23,7 @@ spring:
           #  断言配置
           predicates:
             # path断言
-            - Path=/auth/**
+            - Path=/admin/**
 
 
 eureka:

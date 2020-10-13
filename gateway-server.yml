@@ -17,13 +17,14 @@ spring:
           predicates:
             # path断言
             - Path=/auth/**
-       - id: boot-admin
+        - id: boot-admin
           # 转发uri
-          uri: http://127.0.0.1:40000
+          uri: http://127.0.0.1:50000/
           #  断言配置
           predicates:
             # path断言
-            - Path=/admin/**
+            - Path=/auth/**
+
 
 eureka:
   instance:
@@ -39,4 +40,3 @@ management:
     web:
       exposure:
         include: '*'
-
